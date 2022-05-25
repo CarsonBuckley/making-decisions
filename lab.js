@@ -7,6 +7,13 @@
 */
 
 //CODE HERE
+let lovesCode = true
+
+if (lovesCode === true) {
+  console.log("I love to code!")
+} else {
+  console.log("Coding has it challenges.")
+}
 
 // For problems 2-3 use the following lines of code:
 var amysAge = 29;
@@ -21,6 +28,13 @@ var brittanisBirthYear = 1986;
 */
 
 //CODE HERE
+if (amysAge > brittanisAge) {
+  console.log("Amy is older")
+} else if (amysAge < brittanisAge) {
+  console.log("Brittani is older")
+} else {
+  console.log("Amy and Brittani are the same age")
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -29,6 +43,11 @@ var brittanisBirthYear = 1986;
 */
 
 //CODE HERE
+if (amysBirthYear === brittanisBirthYear) {
+  console.log("Amy and Brittani were born in the same year")
+} else {
+  console.log("Amy and Brittani were not born in the same year")
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -37,10 +56,24 @@ let rain = true;
 
 /*
   Using an if statement and a comparison operator, create code that will log a suggestion on what type of clothes one should wear for the day, based on the above temperature and rain.
-  If it is 80 degrees or above, and raining, one should wear a t-shirt and take an umbrella. If it is between 60 and 80 degrees, and raining, one should wear a rain-jacket. If it is 60 degrees or below, one should wear a jacket and carry an umbrella. Come up with your own clothing suggestions based on those temperature parameters when it is not raining.
+  If it is 80 degrees or above, and raining, one should wear a t-shirt and take an umbrella. If it is between 60 and 80 degrees, and raining, one should wear a rain-jacket. If it is 60 degrees or below and raining, one should wear a jacket and carry an umbrella. Come up with your own clothing suggestions based on those temperature parameters when it is not raining.
 */
 
 //CODE HERE
+if (temperature >= 80 && rain === true) {
+  console.log("Wear Tshirt and bring umbrella")
+} else if (temperature >= 60 && temperature <= 80 && rain === true) {
+  console.log("Wear a rain jacket")
+} else if (temperature <= 60 && rain === true) {
+  console.log("Wear a jacket and bring an umbrella")
+}
+if (temperature >= 80 && rain === false) {
+  console.log("Wear a Tshirt and shorts")
+} else if (temperature >= 60 && temperature <= 80 && rain === false) {
+  console.log("Wear a Tshirt and pants")
+} else if (temperature <= 60 && rain === false) {
+  console.log("Wear a jacket")
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -49,6 +82,10 @@ let rain = true;
 */
 
 //CODE HERE
+//  variable / condition / outcome
+for (let x = 0; x < 10; x++) {
+  console.log("hello")
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -57,7 +94,9 @@ let rain = true;
 */
 
 //CODE HERE
-
+for (let x = 1; x < 11; x++) {
+  console.log(x)
+}
 ////////// PROBLEM 7 //////////
 
 /*
@@ -65,7 +104,9 @@ let rain = true;
 */
 
 //CODE HERE
-
+for (let x = 10; x >= 0; x--) {
+  console.log(x)
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -77,6 +118,11 @@ let passingScore = 7;
 */
 
 //CODE HERE
+while (score < 7) {
+  score++
+  console.log("Your score is not high enough")
+}
+
 
 ////////// INTERMEDIATE PROBLEMS //////////
 
@@ -88,12 +134,24 @@ let passingScore = 7;
 */
 
 //CODE HERE
+let changeMyMind = true
 
+if (changeMyMind === true) {
+  changeMyMind = false 
+} else if (changeMyMind === false) {
+  changeMyMind = true
+}
+
+console.log(changeMyMind)
 ////////// PROBLEM 10 //////////
 // Using the "not" operator (!), change the current value of changeMyMind to true (it should currently be set to false due to the if-else statement in Problem 9). After you change the value of changeMyMind, console.log it's new value (it should now read true).
 
 //CODE HERE
+if (changeMyMind !== true) {
+  changeMyMind = true
+}
 
+console.log(changeMyMind)
 ////////// ADVANCED PROBLEMS //////////
 
 ////////// PROBLEM 11 //////////
@@ -102,3 +160,15 @@ let z = 5;
 // Create a while loop that continues to run while z is greater than 0. Within the while loop, log a countdown from the value of z to 1. Once you have logged the countdown, make sure you decrement z by 1. If your code is running properly, you should see: 5,4,3,2,1,4,3,2,1,3,2,1,2,1,1.
 
 //CODE HERE
+// while (z > 0) {
+//   console.log(z)
+//   z--
+//   console.log(z)
+// }
+
+while (z > 0) {
+  for (let temp = z; temp > 0; temp--) {
+    console.log(temp);
+  }
+  z--;
+}
